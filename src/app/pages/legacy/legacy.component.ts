@@ -1,28 +1,28 @@
 import { NgFor } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { MatButtonModule } from '@angular/material/button';
-import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
+import { MatLegacyButtonModule } from '@angular/material/legacy-button';
+import { MatLegacyCheckboxModule } from '@angular/material/legacy-checkbox';
 import { Task } from 'src/app/models/task';
 
 @Component({
-  selector: 'app-mdc-based',
+  selector: 'app-legacy',
   standalone: true,
   imports: [
-    MatButtonModule,
+    MatLegacyButtonModule,
     MatDividerModule,
     MatIconModule,
-    MatCheckboxModule,
+    MatLegacyCheckboxModule,
     FormsModule,
     NgFor,
   ],
-  templateUrl: './mdc-based.component.html',
-  styleUrls: ['./mdc-based.component.scss'],
+  templateUrl: './legacy.component.html',
+  styleUrls: ['./legacy.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class MdcBasedComponent {
+export class LegacyComponent {
   task: Task = {
     name: 'Indeterminate',
     completed: false,
